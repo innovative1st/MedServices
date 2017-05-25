@@ -1,0 +1,98 @@
+<div class='container-fluid'>
+  <div class="row">
+      <div class="col-md-5 col-sm-5 ">
+        <div class="container">
+          <form>
+            <fieldset [disabled]="!isEdit" >
+                  <div class="form-group row">
+                  <legend class="col-form-legend col-sm-1-12">Patient Record</legend>
+                  <div class=row>
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="patientId" class=" col-form-label">Record ID</label>
+                        <input type="text" size=10 class=" form-control " name="patientId" id="#patientId" placeholder=""
+                         [value]="patient.patientId" >
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="rDate" class=" col-form-label">Date</label>
+                        <input type="text" class="form-control" name="rDate" id="#rDate" placeholder="" 
+                        [value]="patient.fName">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="Complaints" class=" col-form-label">Complaints</label>
+                        <textarea class="form-control" name="rComplaints" id="#rComplaints" placeholder=""
+                         rows=4, cols="50"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="rObservations" class=" col-form-label">Observations</label>
+                        <textarea class="form-control" name="rObservations" id="#rObservations" placeholder=""
+                          rows=5, cols="100"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="rDiagnosis" class=" col-form-label">Diagnosis</label>
+                        <input type="text" class="form-control" name="rDiagnosis" id="#Diagnosis" placeholder="" 
+                        >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="xLabTests" class=" col-form-label">Lab Tests</label>
+                         <textarea class="form-control" name="xLabTests" id="#xLabTests" placeholder=""
+                          rows=7, cols="100"></textarea>
+                      </div>
+                    </div>
+                   
+                    <div class="row">
+                      <div class="col-sm-5 col-md-7 form-group">
+                        <label for="xLabTests" class=" col-form-label">Prescription</label>
+                        <table>
+                          <th>Medicine</th>
+                          <th>Frequency</th>
+                          <th>Duration</th>
+                          <th>Instructions</th>
+                          <tr>
+                              <td>Paracetamol</td>
+                              <td>Once in a day</td>
+                              <td>14 Days</td>
+                              <td>Before sleep</td>
+                          </tr>
+                          <tr>
+                              <td>Tera gsd scc pertele</td>
+                              <td>twice in a day</td>
+                              <td>14 Days</td>
+                              <td>after breakfast and dinner</td>
+                          </tr>
+
+
+                        </table>
+
+                      </div>
+                    </div>
+                    
+                  </div>
+               </fieldset>
+               
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10 " [hidden]="isEdit">
+                    <button type="Edit" class="btn btn-primary " (click)="toggleEdit()">Edit</button>
+                  </div>
+                   <div class="offset-sm-2 col-sm-10 " [hidden]="!isEdit">
+                    <button type="Submit" class="btn btn-primary " >Submit</button>
+                     <button type="button" class="btn btn-primary" (click)="toggleEdit()">Cancel</button>
+                  </div>
+
+                </div>
+           
+          </form>
+        </div>
+          
+      </div>
+   </div>
+</div>

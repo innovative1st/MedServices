@@ -1,0 +1,71 @@
+<div class='container-fluid'>
+  <div class="row">
+      <div class="col-md-4 col-sm-4 ">
+        <div class="container">
+          <form>
+            <fieldset [disabled]="!isEdit" >
+                  <div class="form-group row">
+                       <legend class="col-form-legend ">Basic Info</legend>
+                        <div class=row>
+                            <div class="col-sm-4 col-md-4 form-group">
+                              <label for="patientId" class=" col-form-label">Patient ID</label>
+                              <input type="text" size=10 class=" form-control " name="patientId" id="#patientId" placeholder=""
+                              [value]="patient.patientId" >
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-4 col-md-4 form-group">
+                            <label for="fName" class=" col-form-label">First Name</label>
+                            <input type="text" class="form-control" name="fName" id="#fName" placeholder="" 
+                            [value]="patient.fName">
+                          </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-md-4 form-group">
+                        <label for="lName" class=" col-form-label">Last Name</label>
+                        <input type="text" class="form-control" name="lName" id="#lName" placeholder=""
+                        [value]="patient.lName" >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-md-4 form-group">
+                        <label for="contactNo" class=" col-form-label">Contact No.</label>
+                        <input type="text" class="form-control" name="contactNo" id="#contactNo" placeholder=""
+                         [value]="patient.contactNo" >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-md-4 form-group">
+                        <label for="age" class=" col-form-label">Age</label>
+                        <input type="text" class="form-control" name="age" id="#age" placeholder="" 
+                         [value]="patient.age">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-4 col-md-4 form-group">
+                        <label for="emailID" class=" col-form-label">Email ID</label>
+                        <input type="email" class="form-control" name="emailID" id="#emailID" placeholder="" 
+                         [value]="patient.emailID">
+                      </div>
+                    </div>
+                    
+                  </div>
+               </fieldset>
+               
+                <div class="form-group row">
+                  <div class="offset-sm-2 col-sm-10 " [hidden]="isEdit">
+                    <button type="Edit" class="btn btn-primary " (click)="toggleEdit()">Edit</button>
+                  </div>
+                   <div class="offset-sm-2 col-sm-10 " [hidden]="!isEdit">
+                    <button type="Submit" class="btn btn-primary " >Submit</button>
+                     <button type="button" class="btn btn-primary" (click)="toggleEdit()">Cancel</button>
+                  </div>
+
+                </div>
+           
+          </form>
+        </div>
+          
+      </div>
+   </div>
+</div>

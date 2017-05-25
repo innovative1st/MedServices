@@ -1,0 +1,20 @@
+
+/* ===========================
+--- Intro
+============================ */
+
+.intro {
+	width:100%;
+	position:relative;
+}
+
+.intro-content {
+	background: url(../../../assets/img/dummy/bg1.jpg) no-repeat top center;
+	padding:200px 0 60px;
+}
+.intro-content.intro-nobg {
+	background:#fff;
+	position:relative;
+	margin:0;
+	padding:140px 0 60px;
+}

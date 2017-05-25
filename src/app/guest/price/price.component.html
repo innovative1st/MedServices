@@ -1,0 +1,42 @@
+<!-- Section: pricing -->	
+	<section id="pricing" class="home-section bg-gray paddingbot-60">	
+		<div class="container marginbot-50">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2" >
+					<div class="wow lightSpeedIn" data-wow-delay="0.1s">
+					<div class="section-heading text-center">
+					<h2 class="h-bold">Service packages</h2>
+					<p>Digitise information of your patients with below packages</p>
+					</div>
+					</div>
+					<div class="divider-short"></div>
+				</div>
+			</div>
+		</div>
+           
+		   <div class="container">
+			
+			<div class="row">
+
+				<div class="col-sm-4 pricing-box" *ngFor="let pkg of packages">
+					<div class="wow bounceInUp" data-wow-delay="0.1s">
+					<div class="pricing-content general">
+						<h2>{{pkg.pkgName}}</h2>
+						<h3>Rs {{pkg.pkgPrice}}<sup>.00</sup> <span></span></h3>
+						<ul>
+							<li *ngFor="let details of pkg.pkgDetail">{{details}} <i class="fa fa-check icon-success"></i></li>
+							
+						</ul>
+
+						<div class="price-bottom">
+							<a href="#" class="btn btn-skin btn-lg">Purchase</a>
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>				
+				
+            </div>
+	</section>	 
+	<!-- /Section: pricing -->

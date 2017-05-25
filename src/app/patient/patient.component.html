@@ -1,0 +1,7 @@
+<div *ngIf="isPatientNew else pDetails ">
+<app-newpatient></app-newpatient>
+</div>
+<ng-template #pDetails>
+<!--app-patientdetails> </app-patientdetails-->
+<app-diagnostic></app-diagnostic>
+</ng-template>
